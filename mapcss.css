@@ -1,0 +1,272 @@
+/* Глобальная настройка стилей */
+
+body {
+  margin: 0 0;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+main {}
+
+* {
+  color: #4e4e4e;
+}
+
+/* */
+
+.menu {
+  background-color: #e3f2fd;
+  height: auto;
+  position: fixed;
+  width: 100%;
+}
+
+a {
+  font-style: none;
+  text-decoration: none;
+}
+
+.menu-item {
+  font-size: 30px;
+  float: left;
+  margin-left: 15px;
+  line-height: 50px;
+}
+
+.menu-form {
+  size: 30px;
+  line-height: 50px;
+}
+
+.karta1 {
+  position: static;
+}
+
+.floars {
+  position: fixed;
+  width: 100px;
+  /* height: 100px; */
+  right: 0px;
+  top: 0px;
+  background: #cbd4c8;
+  border-left: 2px solid #8caa9c;
+  border-right: 2px solid #8caa9c;
+  box-sizing: border-box;
+  font-family: 'Caveat', cursive;
+
+}
+
+.list-of-floars {
+  list-style-type: none;
+  font-weight: bold;
+  padding: 0px;
+  margin: 0;
+}
+
+li {
+  padding: 1px;
+  border-bottom: 2px solid #8caa9c;
+  /* width: 100%; */
+  /* height: 25px; */
+  box-sizing: content-box;
+  margin: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+/* .floar {
+  padding: 1px;
+  border: 2px solid #06492a;
+  width: 100%;
+  height: 25px;
+  box-sizing: content-box;
+  margin: 0;
+  color: #3a3a3a;
+
+} */
+
+.selectedFloar {
+  background: #ffffff;
+  width: 100%;
+  /* height: 25px; */
+  box-sizing: content-box;
+  margin: 0;
+  color: #3a3a3a;
+}
+
+
+
+
+
+
+.filter-bar {
+  display: flex;
+  align-items: center;
+
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  color: #4e4e4e;
+  background: #cbd4c8;
+  border: 2px solid #8caa9c;
+
+  overflow-x: auto;
+  white-space: nowrap;
+  font-family: 'Caveat', cursive;
+  
+}
+
+.filter-bar p {
+  margin-left: 20px;
+}
+
+.filter-bar-input {
+  display: inline-block;
+  /* margin-left: 20px; */
+  margin: 0 8px 0 8px;
+  line-height: 60px;
+}
+
+.filter-bar-input * {
+  cursor: pointer !important;
+}
+
+.filter-bar-input legend {
+  font-weight: bold;
+  line-height: 60px;
+  font-size: 25px;
+}
+
+.map {
+  margin-bottom: 10px;
+  enable-background: new 0 0 3646 3901.8;
+}
+
+#label {
+  width: 350px;
+  height: 100px;
+  color: #4d4d4d;
+  font-size: 30px;
+  text-align: center;
+  background-color: #e6e6e6;
+  padding: 15px;
+  border: 3px solid #999999;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+#main:target {
+  display: block;
+}
+
+
+dialog {
+  border-radius: 20px;
+  background: yellow;
+}
+
+/* прячем input checkbox */
+input[type="checkbox"] {
+  display: none;
+}
+
+/* стили для метки */
+label {
+  cursor: default;
+  font-weight: bold;
+  line-height: 40px;
+  padding: 10px 0;
+  vertical-align: middle;
+  font-size: 20px;
+}
+
+/* формируем внешний вид чекбокса в псевдоэлементе before */
+label:before {
+  content: " ";
+  color: #000;
+  display: inline-block;
+  font: 20px/30px Arial;
+  margin-right: 15px;
+  position: relative;
+  text-align: center;
+  text-indent: 0px;
+  width: 30px;
+  height: 30px;
+  background: #FFF;
+  border: 1px solid #e3e3e3;
+  border-image: initial;
+  vertical-align: middle;
+
+}
+
+/* вариации внешнего вида в зав-ти от статуса checkbox */
+/* checked */
+input:checked+label:before {
+  content: "✓";
+}
+
+/* disabled */
+input:disabled+label:before {
+  background: #eee;
+  color: #aaa;
+
+  /* прячем input checkbox */
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  /* стили для метки */
+  label {
+    color: #000;
+    cursor: default;
+    font-weight: normal;
+    line-height: 30px;
+    padding: 10px 0;
+    vertical-align: middle;
+  }
+
+  /* формируем внешний вид чекбокса в псевдоэлементе before */
+  label:before {
+    content: " ";
+    color: #000;
+    display: inline-block;
+    font: 20px/30px Arial;
+    margin-right: 15px;
+    position: relative;
+    text-align: center;
+    text-indent: 0px;
+    width: 30px;
+    height: 30px;
+    background: #FFF;
+    border: 1px solid #e3e3e3;
+    border-image: initial;
+    vertical-align: middle;
+  }
+
+  /* вариации внешнего вида в зав-ти от статуса checkbox */
+  /* checked */
+  input:checked+label:before {
+    content: "x";
+  }
+
+  /* disabled */
+  input:disabled+label:before {
+    background: #eee;
+    color: #aaa;
+  }
+
+  .icon-text {
+    font-weight: bold;
+  }
+
+  .selected {
+    fill: #CCCCFF;
+  }
